@@ -1,0 +1,15 @@
+{
+  "name": "advent-of-code",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "vitepress dev",
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress build && vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "1.0.0-rc.31"
+  }
+}
