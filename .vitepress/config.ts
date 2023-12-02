@@ -11,6 +11,7 @@ export default defineConfig({
         text: '2023',
         items: [
           { text: 'Day 1: Trebuchet?!', link: '/2023/day-1' },
+          { text: 'Day 2: Cube Conundrum', link: '/2023/day-2' },
         ],
       },
     ],
