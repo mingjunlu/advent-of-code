@@ -8,8 +8,10 @@ export default defineConfig({
     sidebar: [
       {
         text: '2023',
-        items: []
-      }
+        items: [
+          { text: 'Day 1: Trebuchet?!', link: '/2023/day-1' },
+        ],
+      },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/mingjunlu/advent-of-code' },
