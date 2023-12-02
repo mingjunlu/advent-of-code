@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: 'Advent of Code',
   description: 'My Solutions to Advent of Code',
+  base: '/advent-of-code/',
   srcDir: 'src',
   themeConfig: {
     sidebar: [
