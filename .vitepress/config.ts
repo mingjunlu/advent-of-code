@@ -15,6 +15,7 @@ export default defineConfig({
         ],
       },
     ],
+    outline: 'deep',
     socialLinks: [
       { icon: 'github', link: 'https://github.com/mingjunlu/advent-of-code' },
     ],
