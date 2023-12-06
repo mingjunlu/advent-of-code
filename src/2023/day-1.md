@@ -31,10 +31,10 @@ Consider your entire calibration document. **What is the sum of all of the calib
 
 <!-- prettier-ignore-start -->
 ```ts
-function calculateSum(values: string[]): number {
-  return values
-    .map((text) => {
-      const numberText = text.trim().replace(/[^0-9]/g, '');
+function resolvePuzzle(lines: string[]): number {
+  return lines
+    .map((line) => {
+      const numberText = line.trim().replace(/[^0-9]/g, '');
       return Number(`${numberText.at(0)}${numberText.at(-1)}`);
     })
     .filter(Number.isInteger)
@@ -67,7 +67,7 @@ In this example, the calibration values are `29`, `83`, `13`, `24`, `42`, `14`, 
 
 <!-- prettier-ignore-start -->
 ```ts
-function calculateSum(values: string[]): number {
+function resolvePuzzle(lines: string[]): number {
   const digitWords = [
     'one',
     'two',
@@ -83,9 +83,9 @@ function calculateSum(values: string[]): number {
     digitWords.map((digit, index) => [digit, index + 1]),
   );
   const digitRegex = new RegExp(`[0-9]|${digitWords.join('|')}`, 'g');
-  return values
-    .map((text) => {
-      const digits = (text.trim().match(digitRegex) ?? []).map(
+  return lines
+    .map((line) => {
+      const digits = (line.trim().match(digitRegex) ?? []).map(
         (digitText) => digitMap.get(digitText) ?? Number(digitText),
       );
       return Number(`${digits.at(0)}${digits.at(-1)}`);
@@ -102,10 +102,10 @@ function calculateSum(values: string[]): number {
 ```ts
 type Digit = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 
-function calculateSum(values: string[]): number {
-  return values
-    .map((value) => {
-      const digits = value
+function resolvePuzzle(lines: string[]): number {
+  return lines
+    .map((line) => {
+      const digits = line
         .trim()
         .split(/([0-9])/)
         .filter((text) => text.length > 0)
@@ -148,10 +148,10 @@ function isDigit(value: number): value is Digit {
 ```ts
 type Digit = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
 
-function calculateSum(values: string[]): number {
-  return values
-    .map((value) => {
-      const text = value.trim();
+function resolvePuzzle(lines: string[]): number {
+  return lines
+    .map((line) => {
+      const text = line.trim();
       return Number(`${findFirstDigit(text)}${findLastDigit(text)}`);
     })
     .filter(Number.isInteger)

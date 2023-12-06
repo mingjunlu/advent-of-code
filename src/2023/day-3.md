@@ -37,7 +37,7 @@ Of course, the actual engine schematic is much larger. **What is the sum of all 
 
 <!-- prettier-ignore-start -->
 ```ts
-function calculateSum(lines: string[]): number {
+function resolvePuzzle(lines: string[]): number {
   const partNumbers = lines.flatMap((line, y, allLines) => {
     return line
       .trim()
@@ -150,7 +150,7 @@ In this schematic, there are **two** gears. The first is in the top left; it has
 
 <!-- prettier-ignore-start -->
 ```ts{6-8,36-38,41,42,44}
-function calculateSum(lines: string[]): number {
+function resolvePuzzle(lines: string[]): number {
   const gearRatios = lines.flatMap((line, y, allLines) => {
     return line
       .trim()

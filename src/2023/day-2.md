@@ -41,11 +41,11 @@ type Game = {
   rounds: CubeCounter[];
 };
 
-function calculateSum(records: string[]): number {
+function resolvePuzzle(lines: string[]): number {
   const gameRecordMap = new Map<string, CubeCounter[]>(
-    records
-      .map((value) => {
-        const game = parseGameFromRecord(value);
+    lines
+      .map((line) => {
+        const game = parseGameFromRecord(line);
         return [game.id, game.rounds] as const;
       })
       .filter(([id, rounds]) => isPossibleGame({ id, rounds })),
@@ -137,10 +137,10 @@ type Game = {
   rounds: CubeCounter[];
 };
 
-function calculateSum(records: string[]): number {
+function resolvePuzzle(lines: string[]): number {
   const gameRecordMap = new Map<string, CubeCounter>(
-    records.map((value) => {
-      const game = parseGameFromRecord(value);
+    lines.map((line) => {
+      const game = parseGameFromRecord(line);
       const fewestCounter: CubeCounter = {
         red: Math.max(...game.rounds.map((round) => round.red)),
         green: Math.max(...game.rounds.map((round) => round.green)),

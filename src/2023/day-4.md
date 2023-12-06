@@ -43,7 +43,7 @@ Take a seat in the large pile of colorful cards. **How many points are they wort
 
 <!-- prettier-ignore-start -->
 ```ts
-function calculateSum(lines: string[]): number {
+function resolvePuzzle(lines: string[]): number {
   const matchCounts = lines.map((line) => {
     const [, winningNumbersText, myNumbersText] = line
       .trim()
@@ -117,7 +117,7 @@ type Card = {
   copies: Card[] | undefined;
 };
 
-function countCards(lines: string[]): number {
+function resolvePuzzle(lines: string[]): number {
   const cards = lines.map((line) => {
     const [gameIdText, winningNumbersText, myNumbersText] = line
       .trim()
