@@ -14,6 +14,7 @@ export default defineConfig({
           { text: 'Day 2: Cube Conundrum', link: '/2023/day-2' },
           { text: 'Day 3: Gear Ratios', link: '/2023/day-3' },
           { text: 'Day 4: Scratchcards', link: '/2023/day-4' },
+          { text: 'Day 5: If You Give A Seed A Fertilizer', link: '/2023/day-5' },
         ],
       },
     ],
