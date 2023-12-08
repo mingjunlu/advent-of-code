@@ -22,5 +22,11 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/mingjunlu/advent-of-code' },
     ],
+    search: {
+      provider: 'local',
+      options: {
+        detailedView: true,
+      }
+    },
   },
 });
