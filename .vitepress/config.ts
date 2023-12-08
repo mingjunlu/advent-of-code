@@ -15,6 +15,7 @@ export default defineConfig({
           { text: 'Day 3: Gear Ratios', link: '/2023/day-3' },
           { text: 'Day 4: Scratchcards', link: '/2023/day-4' },
           { text: 'Day 5: If You Give A Seed A Fertilizer', link: '/2023/day-5' },
+          { text: 'Day 6: Wait For It', link: '/2023/day-6' },
         ],
       },
     ],
